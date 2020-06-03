@@ -1,12 +1,15 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="userinfo">
+  <view class="title">
+    <text class="my-title">{{myTitle}}</text>
+  </view>
+  <!-- view class="userinfo">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
     <block wx:else>
       <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
-  </view>
+  </view> -->
   <swiper class="swiperItem" indicator-dots="true" indicator-color="rgba(0,0,0,.3)" autoplay="true" interval="5000" duration="1000" circular="true">
     <block wx:for="{{imageItems}}" wx:key="*this" wx:for-item="img">
       <swiper-item>
@@ -15,6 +18,9 @@
       </swiper-item>
     </block>
   </swiper> 
+  <view class="myhello">
+    {{_myhello}}
+  </view>
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
   </view>

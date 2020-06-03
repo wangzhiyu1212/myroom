@@ -6,15 +6,16 @@ Page({
   data: {
     imageItems: [{
       id: 1,
-      imgsrc: "../../images/1.jpg"
+      imgsrc: "/images/1.jpg"
     }, {
       id: 2,
-      imgsrc: "../../images/2.jpg"
+      imgsrc: "/images/2.jpg"
     }, {
       id: 3,
-      imgsrc: "../../images/3.jpg"
+      imgsrc: "/images/3.jpg"
     }],
     motto: 'Hello Mike',
+    myTitle: '老婆 生日快乐',
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
@@ -52,6 +53,21 @@ Page({
         }
       })
     }
+    var that=this; // 这个地方非常重要，重置data{}里数据时候setData方法的this应为以及函数的this, 如果在下方的success直接写this就变成了wx.request()的this了
+    wx.request({  
+      url: 'http://localhost:8082/hello',  
+      data:{},  //发送给后台的数据
+      method:'GET',  
+      header: {  
+        'content-type': 'application/json'  
+      },  
+      success: function (res) {  
+        console.log(res.data); //res.data相当于ajax里面的data,为后台返回的数据
+        that.setData({ 
+          _myhello: res.data
+        })
+      }  
+    })
   },
   getUserInfo: function(e) {
     console.log(e)
