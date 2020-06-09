@@ -1,14 +1,33 @@
 {
   "pages":[
     "pages/index/index",
+    "pages/photo/photo",
     "pages/logs/logs"
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarBackgroundColor": "#B59E73",
+    "navigationBarTitleText": "琪琪&治宇浪漫小屋",
     "navigationBarTextStyle":"black"
   },
+  "tabBar": {
+    "color": "#bfbfbf",
+     "selectedColor": "#d81e06",
+     "list": [
+       {
+         "pagePath": "pages/index/index",
+         "text": "首页",
+         "iconPath": "/images/home.png",
+         "selectedIconPath": "/images/home-red.png"
+       },
+       {
+         "pagePath": "pages/photo/photo",
+         "text": "相册",
+         "iconPath": "/images/all.png",
+         "selectedIconPath": "/images/all-red.png"
+       }
+     ]
+   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"
 }

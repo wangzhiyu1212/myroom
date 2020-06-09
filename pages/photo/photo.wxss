@@ -1,0 +1,59 @@
+/* pages/photo/photo.wxss */
+/**分类栏**/
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+.classify{
+  margin-top: 0rpx;
+}
+.left-navbar{
+  position:absolute;
+  left:0;
+  width:19%;
+  height:100%;
+  background-color:#eee;
+  font-size:15px;
+}
+.left-navbar view{
+  height:80rpx;
+  line-height: 80rpx;
+  text-align:center;
+}
+.active{
+  background-color:#FFF;
+  color:red;
+  font-size:18px;
+}
+#right{
+  position:absolute;
+  right:0;
+  width:75%;
+  height:90%;
+}
+.img-banner{
+  height:150rpx;
+  width:100%;
+}
+.photos-list{
+  display:flex;
+  flex-wrap:wrap;
+  margin-top:30rpx;
+}
+.photos-title{
+  width:100%;
+  font-size:15px;
+  font-weight:bold;
+  padding-left:10rpx;
+}
+.photos{
+  width:150rpx;
+  font-size:14px;
+  margin:15rpx;
+  text-align:center;
+}
+.img{
+  width:140rpx;
+  height:140rpx;
+}
